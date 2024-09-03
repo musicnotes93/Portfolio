@@ -134,7 +134,9 @@
   <img src="./webdev.jpeg">
 
   <div id="flex-form2">
-  <form id="contactForm" method="post" action="mail.php">
+  <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="5de816cb-67e0-4078-9efd-bb5617f468eb">
+    <div id="result"></div>
     <div id="flex-form">
      <div id="first-name">
       <label for="fname">First name:</label><br>
@@ -153,8 +155,10 @@
     <label for="message">Your message</label><br>
     <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
     <div>
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
     <button>Submit Form</button>
     </div>
+    
   </form>
 <div>
 
