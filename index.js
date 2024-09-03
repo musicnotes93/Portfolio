@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", function(){
     $("h1").hide().slideDown(1000);
     $("#portfolio-title").hide();
-    $("#arrow").hide()
+    $("#arrow").hide();
     setTimeout(function() {
         $("#portfolio-title").css("opacity", 0).slideDown(1000).animate({ opacity: 1 },{queue: false, duration: 3000});
 }, 500);
@@ -10,6 +10,7 @@ window.addEventListener("DOMContentLoaded", function(){
     }, 4000);
     
 });
+
 
 
 $(window).on('mousemove', function(e){
@@ -60,3 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	allAnimatedElements.forEach((element) => observer.observe(element));
 
 });
+
+
+
+
+
+

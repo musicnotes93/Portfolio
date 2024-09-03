@@ -261,6 +261,34 @@ button:hover {
     background-color: #1F316F;
 }
 
+#thankYou {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 200px;
+}
+
+#thankYou h1 {
+    font-size: 3rem;
+}
+
+#thankYouFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#thankYou a {
+    font-size: 2rem;
+    color:#1F316F;
+}
+
+#thankYou a:hover {
+    color: purple;
+}
+
 
 
 
