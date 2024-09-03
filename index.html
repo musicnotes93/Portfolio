@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<div class="wrapper">
 <section id="intro">
   <div class="flex-container">
     <div class="flexSubContainer">
@@ -24,21 +26,141 @@
      </div>
     
      <h1>Web Developer</h1>
-     <h2><span id="portfolio">Portfolio</span> <span id="by">by</span> <span id="name">Mallory Phillips</span></h2>
+     <h2 id="portfolio-title"><span id="portfolio">Portfolio</span> <span id="by">by</span> <span id="name">Mallory Phillips</span></h2>
      
-     <img src="./mallory.jpg">
     
+       <img src="./mallory.jpg">
+       
+  
       <div id="geoShapes">
        <img class="geo" src="./shape1.png">
        <img class="geo" src="./shape1.png">
        <img class="geo" src="./shape1.png">
       </div>
-     
+      <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+      </svg>
     </div>
-   
-  <p>I'm a Front End Web Developer based in the North Carolina Triangle area. I am a Highly motivated and detail-oriented professional transitioning to web development with a robust background in managing diverse tasks, problem-solving, and client communication. Experienced in utilizing technology for project management and improving operational efficiency. Proficient in HTML, CSS, JavaScript, and web development tools, with a strong foundation in critical thinking and project management from previous roles.</p>
+    <p>I'm a Front End Web Developer based in the North Carolina Triangle area. I am a Highly motivated and detail-oriented professional transitioning to web development with a robust background in managing diverse tasks, problem-solving, and client communication. Experienced in utilizing technology for project management and improving operational efficiency. Proficient in HTML, CSS, JavaScript, and web development tools, with a strong foundation in critical thinking and project management from previous roles.</p>
  </div>
+ </section>
+
+
+<section id="projects">
+  <h3>Projects</h3>
+<div class="flex-project">
+ <a href="https://www.malloryphillipsviolin.com" target="_blank"><video id="video" muted loop preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
+    <source type="video/mp4" src="./phillips.mov">
+  </video></a>
+  <div>
+   <a href="https://www.malloryphillipsviolin.com" target="_blank"><h4>Personal Music Website</h4></a>
+
+    <ul>
+      <li>Description: Designed and developed a personal music website to showcase my portfolio, performances, and services.</li>
+      <li>Technologies Used: HTML, CSS, JavaScript</li>
+      <li>Libraries used: Bootstrap, jQuery</li>
+      <li>Highlights: Implemented responsive design for optimal viewing across devices, integrated multimedia elements, and enhanced user experience with interactive features.</li>
+    </ul>
+ </div> 
+ </div>
+
+ <div class="flex-project">
+  <a href="https://musicnotes93.github.io/CatQuiz/" target="_blank"><video id="video2" muted loop preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
+    <source type="video/mp4" src="./catquiz2.mov">
+  </video></a>
+  <div>
+    <a href="https://musicnotes93.github.io/CatQuiz/" target="_blank"><h4>Personality Quiz</h4></a>
+
+   <ul>
+    <li>Description: Created an engaging personality quiz web application to assess and analyze user traits with an interactive and personalized user experience.</li>
+     <li>Technologies Used: HTML, CSS, JavaScript</li>
+     <li>Libraries used: jQuery</li>
+     <li>Highlights: Developed a dynamic quiz engine with real-time feedback, designed a user-friendly interface for an immersive experience, and implemented adaptive design for seamless functionality across various devices.</li>
+   </ul>
+  </div> 
+ </div>
+
+ <div class="flex-project">
+  <a href="https://musicnotes93.github.io/SimonGameMobileFriendly/" target="_blank"><video id="video3" muted loop preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
+    <source type="video/mp4" src="./simongame2.mov">
+  </video></a>
+ <div>
+   <a href="https://musicnotes93.github.io/SimonGameMobileFriendly/" target="_blank"><h4>Simon Game</h4></a>
+
+  <ul>
+   <li>Description: Designed and developed an interactive Simon Game to provide an engaging and challenging memory exercise for users.</li>
+    <li>Technologies Used: HTML, CSS, JavaScript</li>
+    <li>Libraries used: jQuery</li>
+    <li>Highlights: Created a visually appealing and responsive game interface, implemented a sequence generation algorithm for progressively challenging levels, and integrated audio and visual feedback to enhance user interaction and gameplay experience.</li>
+  </ul>
+ </div> 
+</div>
+
+<div class="flex-project">
+  <div>
+   <a href="https://musicnotes93.github.io/DrumKit/" target="_blank"><img src="./drumkit.png"></a>
+ </div>
+ <div>
+   <a href="https://musicnotes93.github.io/DrumKit/" target="_blank"><h4>Interactive Drum Kit</h4></a>
+  <ul>
+   <li>Description: Built an interactive drum kit application using JavaScript to simulate a real drum kit experience online.</li>
+    <li>Technologies Used: HTML, CSS, JavaScript</li>
+    <li>Highlights: Implemented sound effects and interactive buttons for each drum element, allowing users to play and create drum patterns directly in their browsers, using both button presses and key presses.</li>
+  </ul>
+ </div> 
+</div>
+<div id="geoShapes2">
+  <img class="geo" src="./shape1.png"><br>
+  <img class="geo" src="./shape1.png"><br>
+  <img class="geo" src="./shape1.png"><br>
+ </div>
+
+ <hr>
+<section id="contact">
+ <div id="contact-flex">
+  <h2 class="animate" id="contact-title">Work <br>
+  <span>with me</span></h2>
+
+
+      <div id="geoShapes3">
+       <img class="geo" src="./shape1.png">
+       <img class="geo" src="./shape1.png">
+       <img class="geo" src="./shape1.png">
+      </div>
+  </div>
+
+  <div id="contact-me">
+  <img src="./webdev.jpeg">
+
+  <div id="flex-form2">
+  <form>
+    <div id="flex-form">
+     <div id="first-name">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" required>
+     </div>
+     <div id="last-name">
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" required>
+     </div>
+    </div>
+
+    <label for="email">Email address</label><br>
+    <input type="text" id="email" name="email" required><br>
+    <label for="phone">Phone number</label><br>
+    <input type="text" id="phone" name="phone"><br>
+    <label for="message">Your message</label><br>
+    <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
+  </form>
+<div>
+  <button>Submit form</button>
+</div>
+</div>
+ </div>
+
+  </section>
 </section>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./index.js"></script>
