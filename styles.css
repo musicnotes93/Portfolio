@@ -220,6 +220,8 @@ input {
     width: 40vw;
     height: 40px;
     font-size: 1.4rem;
+    border-radius: 5px;
+    border: none;
 }
 
 #fname {
@@ -235,6 +237,8 @@ input {
     height: 150px;
     width: 40vw;
     font-size: 1.4rem;
+    border: none;
+    border-radius: 5px;
 }
 
 #flex-form2 {
@@ -250,6 +254,7 @@ button {
     background-color:#295F98;
     color:#EAE4DD;
     border: none;
+    border-radius: 5px;
 }
 
 button:hover {
