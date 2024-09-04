@@ -13,9 +13,13 @@
 <body>
 
 <div class="wrapper">
-<section id="intro">
+ <section id="intro">
   <div class="flex-container">
-    <div class="flexSubContainer">
+    <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+    </svg>
+   
+    <div id="margins">
      <div class="year">
        <svg xmlns="http://www.w3.org/2000/svg"  height="12" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
@@ -26,11 +30,14 @@
        </svg>
      </div>
     
-     <h1>Web Developer</h1>
-     <h2 id="portfolio-title"><span id="portfolio">Portfolio</span> <span id="by">by</span> <span id="name">Mallory Phillips</span></h2>
      
+       <h1>Web Developer</h1>
+       <h2 id="portfolio-title"><span id="portfolio">Portfolio</span> <span id="by">by</span> <span id="name">Mallory Phillips</span></h2>
+    </div>
     
-       <img src="./mallory.jpg">
+      
+    <div id="shapeFormat">
+       <img id="mal" src="./mallory.jpg">
        
   
       <div id="geoShapes">
@@ -38,17 +45,20 @@
        <img class="geo" src="./shape1.png">
        <img class="geo" src="./shape1.png">
       </div>
-      <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
-      </svg>
-    </div>
-    <p>I'm a Front End Web Developer based in the North Carolina Triangle area. I am a Highly motivated and detail-oriented professional transitioning to web development with a robust background in managing diverse tasks, problem-solving, and client communication. Experienced in utilizing technology for project management and improving operational efficiency. Proficient in HTML, CSS, JavaScript, and web development tools, with a strong foundation in critical thinking and project management from previous roles.</p>
- </div>
+    
+
+     <p>I'm a Front End Web Developer based in the North Carolina Triangle area. I am a Highly motivated and detail-oriented professional transitioning to web development with a robust background in managing diverse tasks, problem-solving, and client communication. Experienced in utilizing technology for project management and improving operational efficiency. Proficient in HTML, CSS, JavaScript, and web development tools, with a strong foundation in critical thinking and project management from previous roles.</p>
+   </div>
+ 
+  </div>
+
  </section>
+ </div>
 
 
 <section id="projects">
   <h3>Projects</h3>
+
 <div class="flex-project">
  <a href="https://www.malloryphillipsviolin.com" target="_blank"><video id="video" muted loop preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
     <source type="video/mp4" src="./phillips.mov">
@@ -116,6 +126,8 @@
   <img class="geo" src="./shape1.png"><br>
  </div>
 
+
+
  <hr>
 <section id="contact">
  <div id="contact-flex">
@@ -131,10 +143,10 @@
   </div>
 
   <div id="contact-me">
-  <img src="./webdev.jpeg">
+   <img src="./webdev.jpeg">
 
   <div id="flex-form2">
-  <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+   <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
     <input type="hidden" name="access_key" value="5de816cb-67e0-4078-9efd-bb5617f468eb">
     <div id="result"></div>
     <div id="flex-form">
@@ -160,10 +172,6 @@
     </div>
     
   </form>
-<div>
-
-
-</div>
 </div>
  </div>
 

@@ -9,23 +9,24 @@ body {
 }
 
 
-h1, h2, p, span {
+h1, h2, span {
     color: #295F98;
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 6vw;
     font-family: "SUSE", sans-serif;
 }
 
 #portfolio {
-    font-size: 3rem;
+    font-size: 4vw;
     font-style: italic;
 }
 
 #by {
     background-color: #295F98;
     color: white;
+    font-size: 2vw;
     border-radius: 50%;
     padding: 5px;
     margin-left: 50px;
@@ -35,6 +36,7 @@ h1 {
 
 #name {
     color: black;
+    font-size: 2vw;
 }
 
 .year span {
@@ -42,45 +44,47 @@ h1 {
 }
 
 p {
-    margin-top: 25px;
     width: 30vw;
-    color: black;
-    font-size: 1.2rem;
+    font-size: 1.3vw;
 }
 
-.flexSubContainer {
-    margin-top: 100px;
+
+#mal {
+    width: 50vw;
+}
+
+#shapeFormat {
     position: relative;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-img {
-    width: 45vw;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex-container {
     width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 }
 
+#margins {
+    margin-left: 8.5%;
+}
 
 .geo {
-    width: 8vw;
-    margin: 20px;
+    width: 7vw;
+    margin: 0 20px;
     opacity: 0.6;
 }
 
 #geoShapes {
     position: absolute;
-    bottom: 100px;
+    bottom: -60px;
+    left: 120px;
 }
 
 #geoShapes2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     position: absolute;
     top: 10px;
     right: 0px;
@@ -118,10 +122,15 @@ ul {
 
 .wrapper {
     position: relative;
+    width: 100vw;
 }
 
 #intro {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
 }
 
 #projects {
@@ -152,15 +161,15 @@ ul {
 }
 
 video {
-  width: 40vw;
+width: 40vw;
  height: 100%;
 
 }
 
 #arrow {
-    position:absolute;
-    bottom: 100px;
-    left: 90%;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
 }
 
 #contact-title {
@@ -188,8 +197,14 @@ hr {
 }
 
 #contact-flex {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    margin-left: 5%;
+}
+
+#geoShapes3 {
+    position: absolute;
+    top: 0px;
+    right: 0;
 }
 
 #contact {
@@ -198,12 +213,14 @@ hr {
 
 #flex-form {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
 }
 
 #contact-me {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 
 #contact-me img {
@@ -217,25 +234,19 @@ label {
 }
 
 input {
-    width: 40vw;
+    width: 100%;
     height: 40px;
     font-size: 1.4rem;
     border-radius: 5px;
     border: none;
 }
 
-#fname {
-    width: 18vw;
-    line-height: 50px;
-}
 
-#lname {
-    width: 18vw;
-}
+
 
 #message {
     height: 150px;
-    width: 40vw;
+    width: 100%;
     font-size: 1.4rem;
     border: none;
     border-radius: 5px;
@@ -270,6 +281,180 @@ button:hover {
     margin-bottom: 30px;
 }
 
+
+@media (max-width: 900px) {
+p {
+    font-size: 1.5vw;
+}
+
+h4 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+li {
+    font-size: 0.9rem;
+}
+
+.flex-project video {
+    width: 50vw;
+}
+
+.flex-project img {
+    width: 50vw;
+}
+
+#contact-me {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-flex {
+    justify-content: center;
+}
+
+#contact-me img {
+    width: 70vw;
+}
+
+#contactForm {
+    width: 70vw;
+}
+
+#first-name input {
+    width: 34vw;
+}
+
+#last-name input {
+    width: 34vw;
+}
+
+#contact-flex {
+    margin-left: 10%;
+}
+
+
+}
+
+@media (max-width: 775px) {
+    #contact-me img {
+        width: 90vw;
+    }
+    
+    #contactForm {
+        width: 90vw;
+    }
+    
+    #first-name input {
+        width: 44vw;
+    }
+    
+    #last-name input {
+        width: 44vw;
+    }
+    
+    #contact-flex {
+        margin-left: 0.7%;
+    }
+
+    .geo {
+        width: 10vw;
+    }
+    #shapeFormat {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    p {
+        width: 70vw;
+        font-size: 2vw;
+
+    }
+
+    #mal {
+        width: 70vw;
+    }
+
+    #margins {
+        margin-left: 15%;
+    }
+
+    #geoShapes {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        top: 0;
+        left: 50px;
+    }
+
+    .flex-project {
+        flex-direction: column;
+    }
+
+    #wrapper2 {
+        width: 100vw;
+    }
+
+    ul {
+        margin-left: 0px;
+    }
+
+    h4 {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    #mal {
+        width: 90vw;
+    }
+
+    p {
+        width: 90vw;
+        font-size: 2.3vw;
+    }
+
+    #margins {
+        margin-left: 5%;
+    }
+
+    #geoShapes {
+        left: -15px;
+    }
+}
+
+@media (max-width: 500px) {
+    p {
+        font-size: 1rem;
+    }
+
+   h1 {
+    font-size: 3rem;
+   }
+
+   #portfolio {
+    font-size: 2.2rem;
+   }
+
+   #by {
+    font-size: 1.3rem;
+    margin-left: 0px;
+   }
+
+   #name {
+    font-size: 1.5rem;
+   }
+
+   .geo {
+    width: 10vw;
+   }
+
+   #geoShapes3 {
+     top: -20px;
+   }
+}
 
 
 

@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", function(){
         $("#portfolio-title").css("opacity", 0).slideDown(1000).animate({ opacity: 1 },{queue: false, duration: 3000});
 }, 500);
     setTimeout(function() {
-        $("#arrow").fadeIn("slow").animate({bottom: 110}).animate({bottom: 100}).animate({bottom: 110}).animate({bottom: 100});
+        $("#arrow").fadeIn("slow").animate({bottom: 40}).animate({bottom: 20}).animate({bottom: 40}).animate({bottom: 20});
     }, 4000);
     
 });
@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
 $(window).on('mousemove', function(e){
     if(e.offsetY > $(this).height() - 200){      
-      $("#arrow").animate({bottom: 110}).animate({bottom: 100});
+      $("#arrow").animate({bottom: 40}).animate({bottom: 20});
     } else {
     $("#arrow").stop(true, true);
     }
