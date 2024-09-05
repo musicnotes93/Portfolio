@@ -22,14 +22,6 @@ $(window).on('mousemove', function(e){
   });
 
 
-$(window).scroll(function () {
-    var scrollTop = $(window).scrollTop();
-    var height = $(window).height();
-
-    $('#intro').css({
-        'opacity': ((height - scrollTop) / height)
-    }); 
-});
 
 $("#video").mouseout(function() {
     $("#video").get(0).currentTime = 0;

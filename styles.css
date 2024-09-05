@@ -8,7 +8,6 @@ body {
     background-color: #EAE4DD;
 }
 
-
 h1, h2, span {
     color: #295F98;
 }
@@ -120,24 +119,48 @@ ul {
 }
 
 
-.wrapper {
-    position: relative;
-    width: 100vw;
-}
+
 
 #intro {
-    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
 }
 
-#projects {
-    background-color: #EAE4DD;
+.wrapper {
     position: absolute;
-    top: 800px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(2);
 }
+
+
+#projects {
+    height: 100vh;
+    position: absolute;
+    background-color: #EAE4DD;
+    top: 100vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(0px);
+    z-index: 1;
+}
+
+.parallax {
+    height: 100vh;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  perspective: 1px;
+}
+
+
 
 .flex-project {
     margin-bottom: 20px;
