@@ -92,7 +92,6 @@ p {
 
 .flex-project {
     display: flex;
-    align-items: center;
     margin: 0px 40px;
 }
 
@@ -307,6 +306,11 @@ button:hover {
     margin-bottom: 30px;
 }
 
+@media (max-width: 1196px) {
+    .flex-project {
+        align-items: center;
+    }
+}
 
 @media (max-width: 900px) {
 p {
