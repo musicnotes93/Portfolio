@@ -97,7 +97,7 @@ form.addEventListener('submit', function(e) {
 
 
 
-$(window).resize(function() {
+
 if($(window).width()<900)
     {
        $("#website-project").html("<a href='https://www.malloryphillipsviolin.com' target='_blank'><img src='./website.png'</a>");
@@ -105,7 +105,13 @@ if($(window).width()<900)
        $("#simon-game").html("<a href='https://musicnotes93.github.io/SimonGameMobileFriendly/' target='_blank'><img src='./simon.png'></a>");
 
     }
-})
+    
+    
+    $(window).resize(function() {
+        $("#website-project").html("<a href='https://www.malloryphillipsviolin.com' target='_blank'><img src='./website.png'</a>");
+       $("#cat-quiz").html("<a href='https://musicnotes93.github.io/CatQuiz/' target='_blank'><img src='./catquiz.png'></a>");
+       $("#simon-game").html("<a href='https://musicnotes93.github.io/SimonGameMobileFriendly/' target='_blank'><img src='./simon.png'></a>");
+    })
 
   
 
