@@ -107,9 +107,15 @@ if($(window).width()<900)
     
     
     $(window).resize(function() {
+        if($(window).width()<900) {
         $("#website-project").html("<a href='https://www.malloryphillipsviolin.com' target='_blank'><img src='./website.png'</a>");
        $("#cat-quiz").html("<a href='https://musicnotes93.github.io/CatQuiz/' target='_blank'><img src='./catquiz.png'></a>");
        $("#simon-game").html("<a href='https://musicnotes93.github.io/SimonGameMobileFriendly/' target='_blank'><img src='./simon.png'></a>");
+        } else {
+        $("#website-project").html("<a href='https://www.malloryphillipsviolin.com' target='_blank'><video id='video' muted loop preload='auto' onmouseover='this.play()' onmouseout='this.pause()'> <source type='video/mp4' src='./phillips.mov'></video></a></div>"); 
+        $("#cat-quiz").html("<a href='https://www.malloryphillipsviolin.com' target='_blank'><video id='video' muted loop preload='auto' onmouseover='this.play()' onmouseout='this.pause()'> <source type='video/mp4' src='./catquiz2.mov'></video></a></div>"); 
+        $("#simon-game").html("<a href='https://www.malloryphillipsviolin.com' target='_blank'><video id='video' muted loop preload='auto' onmouseover='this.play()' onmouseout='this.pause()'> <source type='video/mp4' src='./simongame2.mov'></video></a></div>"); 
+        }
     })
 
   
