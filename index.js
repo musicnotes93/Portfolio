@@ -8,7 +8,6 @@ window.addEventListener("DOMContentLoaded", function(){
     setTimeout(function() {
         $("#arrow").fadeIn("slow").animate({bottom: 40}).animate({bottom: 20}).animate({bottom: 40}).animate({bottom: 20});
     }, 4000);
-    
 });
 
 

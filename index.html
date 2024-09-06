@@ -53,7 +53,6 @@
    </div>
  
   </div>
-
  </section>
  </div>
 
@@ -61,6 +60,7 @@
 <section id="projects">
   <h3>Projects</h3>
 
+<div class="flexProjectContainer">
 <div class="flex-project">
  <div id="website-project"><a href="https://www.malloryphillipsviolin.com" target="_blank"><video id="video" muted loop preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
     <source type="video/mp4" src="./phillips.mov">
@@ -74,9 +74,11 @@
       <li>Libraries used: Bootstrap, jQuery</li>
       <li>Highlights: Implemented responsive design for optimal viewing across devices, integrated multimedia elements, and enhanced user experience with interactive features.</li>
     </ul>
- </div> 
+  </div> 
+ </div>
  </div>
 
+ <div class="flexProjectContainer">
  <div class="flex-project">
   <div id="cat-quiz"><a href="https://musicnotes93.github.io/CatQuiz/" target="_blank"><video id="video2" muted loop preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
     <source type="video/mp4" src="./catquiz2.mov">
@@ -92,7 +94,9 @@
    </ul>
   </div> 
  </div>
+ </div>
 
+ <div class="flexProjectContainer">
  <div class="flex-project">
   <div id="simon-game"><a href="https://musicnotes93.github.io/SimonGameMobileFriendly/" target="_blank"><video id="video3" muted loop preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
     <source type="video/mp4" src="./simongame2.mov">
@@ -108,7 +112,9 @@
   </ul>
  </div> 
 </div>
+</div>
 
+<div class="flexProjectContainer">
 <div class="flex-project">
   <div>
    <a href="https://musicnotes93.github.io/DrumKit/" target="_blank"><img src="./drumkit.png"></a>
@@ -122,7 +128,9 @@
   </ul>
  </div> 
 </div>
-<div id="geoShapes2">
+</div>
+
+ <div id="geoShapes2">
   <img class="geo" src="./shape1.png"><br>
   <img class="geo" src="./shape1.png"><br>
   <img class="geo" src="./shape1.png"><br>
@@ -131,10 +139,12 @@
 
 
  <hr>
-<section id="contact">
- <div id="contact-flex">
-  <h2 class="animate" id="contact-title">Work <br>
-  <span>with me</span></h2>
+
+ <section id="contact">
+  <div id="container">
+   <div id="contact-flex">
+   <h2 class="animate" id="contact-title">Work <br>
+   <span>with me</span></h2>
 
     <div id="geo-container3">
       <div id="geoShapes3">
@@ -144,14 +154,18 @@
       </div>
     </div>
   </div>
+  </div>
 
+<div class="contactFlexContainer">
   <div id="contact-me">
    <img src="./webdev.jpeg">
+   
 
-  <div id="flex-form2">
+   <div id="flex-form2">
    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
     <input type="hidden" name="access_key" value="5de816cb-67e0-4078-9efd-bb5617f468eb">
     <div id="result"></div>
+    
     <div id="flex-form">
      <div id="first-name">
       <label for="fname">First name:</label><br>
@@ -173,15 +187,20 @@
     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
     <button>Submit Form</button>
     </div>
-    
   </form>
+ </div>
  </div>
 </div>
 
-  </section>
+
+
+</section>
+
+<div id="footer"><hr id="foot"><span>@Mallory Design Lab, 2024</span></div>
 </section>
 
 </div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./index.js"></script>

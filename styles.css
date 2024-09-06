@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+#contact {
+    width: 100vw;
+
+}
+
+#footer span {
+  padding: 0px 0px 20px 40px;
+ 
+}
+
+#foot {
+    margin: 0 40px 10px 40px;
+}
+
+
+
 body {
     background-color: #EAE4DD;
 }
@@ -131,9 +147,10 @@ ul {
 
 
 #projects {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
+    width: 100vw;
     height: 100vh;
     position: absolute;
     background-color: #EAE4DD;
@@ -155,15 +172,17 @@ ul {
 }
 
 .parallax {
-    height: 100vh;
 
-  overflow-x: hidden;
-  overflow-y: auto;
-
-  perspective: 1px;
+height: 100vh;
+overflow-x: hidden;
+overflow-y: auto;
+perspective: 1px;
 }
 
-
+.flexProjectContainer {
+    display: flex;
+    justify-content: center;
+}
 
 .flex-project {
     margin-bottom: 20px;
@@ -202,6 +221,8 @@ width: 40vw;
 #contact-title {
     font-size: 5rem;
     font-family: "SUSE", sans-serif;
+    
+
 }
 
 .in-view {
@@ -216,16 +237,15 @@ width: 40vw;
 
 @keyframes fadeIn {
     from {margin-left: -100px;}
-    to {margin-left: 0px;}
+    to {margin-left: 0;}
 }
 
 hr {
     margin: 60px 40px;
 }
 
-#contact-flex {
-    position: relative;
-}
+
+
 
 #geoShapes3 {
     position: absolute;
@@ -241,12 +261,31 @@ hr {
     gap: 10px;
 }
 
+#contactFlexContainer {
+    width: 100vw;
+}
+
 #contact-me {
-    width: 85vw;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
+
+#contact-flex {
+    position: relative;
+    display: flex;
+    width: 85vw;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
 
 #contact-me img {
     width: 50vw;
