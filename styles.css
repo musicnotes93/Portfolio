@@ -59,22 +59,37 @@ h1 {
 }
 
 p {
-    width: 30vw;
+    /* width: 30vw; */
     font-size: 1.3vw;
+   
 }
 
 
 #mal {
     width: 50vw;
+    
+}
+
+#para {
+    width: 100%;
+    align-self: flex-start;
 }
 
 #shapeFormat {
+    width: 83vw;
     position: relative;
     display: flex;
     gap: 40px;
     justify-content: center;
     align-items: center;
 }
+
+#shapeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .flex-container {
     width: 100vw;
@@ -93,7 +108,7 @@ p {
 #geoShapes {
     position: absolute;
     bottom: -60px;
-    left: 120px;
+    left: 0px;
 }
 
 #geoShapes2 {
@@ -106,14 +121,10 @@ p {
     z-index: 0;
 }
 
-.flex-project {
-    display: flex;
-    margin: 0px 40px;
-}
+
 
 
 h4 {
-    margin-left: 50px;
     font-size: 2rem;
     color: #295F98;
     margin-bottom: 40px;
@@ -122,7 +133,6 @@ h4 {
 ul {
     position: relative;
     padding-left: 15px;
-    margin-left: 50px;
     z-index: 1;
 }
 
@@ -164,7 +174,7 @@ ul {
 }
 
 #projects h3 {
-    margin-left: 7.5%;
+    margin-left: 8.5%;
     align-self: flex-start;
     font-size: 4rem;
     font-family: "SUSE", sans-serif;
@@ -186,7 +196,9 @@ perspective: 1px;
 
 .flex-project {
     margin-bottom: 20px;
-    width: 85vw;
+    width: 83vw;
+    display: flex;
+    gap: 20px;
 }
 
 .flex-project a {
@@ -426,16 +438,19 @@ li {
     #shapeFormat {
         flex-direction: column;
         gap: 20px;
+        width: 70vw;
+       
     }
 
+
+
     p {
-        width: 70vw;
         font-size: 2vw;
 
     }
 
     #mal {
-        width: 70vw;
+       width: 100%;
     }
 
     #margins {
@@ -447,7 +462,7 @@ li {
         flex-direction: column;
         gap: 20px;
         top: 0;
-        left: 50px;
+        left: -60px;
     }
 
     .flex-project {
@@ -483,12 +498,15 @@ li {
 @media (max-width: 640px) {
 
     #mal {
-        width: 90vw;
+        width: 100%;
     }
 
     p {
-        width: 90vw;
         font-size: 2.3vw;
+    }
+
+    #shapeFormat {
+        width: 90vw;
     }
 
     #margins {
@@ -496,7 +514,7 @@ li {
     }
 
     #geoShapes {
-        left: -15px;
+        left: -50px;
     }
 
     .flex-project {
