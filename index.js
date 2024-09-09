@@ -22,17 +22,7 @@ $(window).on('mousemove', function(e){
 
 
 
-$("#video").mouseout(function() {
-    $("#video").get(0).currentTime = 0;
-})
 
-$("#video2").mouseout(function() {
-    $("#video2").get(0).currentTime = 0;
-})
-
-$("#video3").mouseout(function() {
-    $("#video3").get(0).currentTime = 0;
-})
 
 document.addEventListener("DOMContentLoaded", () => {
 	const observer = new IntersectionObserver(entries => {
@@ -96,27 +86,79 @@ form.addEventListener('submit', function(e) {
 
 
 
-
+$( document ).ready(function () {
 if($(window).width()<900)
     {
        $("#website-project").html("<a href='https://www.malloryphillipsviolin.com' target='_blank'><img src='./website.png'</a>");
        $("#cat-quiz").html("<a href='https://musicnotes93.github.io/CatQuiz/' target='_blank'><img src='./catquiz.png'></a>");
        $("#simon-game").html("<a href='https://musicnotes93.github.io/SimonGameMobileFriendly/' target='_blank'><img src='./simon.png'></a>");
+       $("#library").html("<a href='https://musicnotes93.github.io/InteractiveLibrary/' target='_blank'><img src='./library.png'></a>")
 
     }
-    
-    
     $(window).resize(function() {
         if($(window).width()<900) {
         $("#website-project").html("<a href='https://www.malloryphillipsviolin.com' target='_blank'><img src='./website.png'</a>");
        $("#cat-quiz").html("<a href='https://musicnotes93.github.io/CatQuiz/' target='_blank'><img src='./catquiz.png'></a>");
        $("#simon-game").html("<a href='https://musicnotes93.github.io/SimonGameMobileFriendly/' target='_blank'><img src='./simon.png'></a>");
-        } else {
-        $("#website-project").html("<a href='https://www.malloryphillipsviolin.com' target='_blank'><video id='video' muted loop preload='auto' onmouseover='this.play()' onmouseout='this.pause()'> <source type='video/mp4' src='./phillips.mov'></video></a></div>"); 
-        $("#cat-quiz").html("<a href='https://www.malloryphillipsviolin.com' target='_blank'><video id='video' muted loop preload='auto' onmouseover='this.play()' onmouseout='this.pause()'> <source type='video/mp4' src='./catquiz2.mov'></video></a></div>"); 
-        $("#simon-game").html("<a href='https://www.malloryphillipsviolin.com' target='_blank'><video id='video' muted loop preload='auto' onmouseover='this.play()' onmouseout='this.pause()'> <source type='video/mp4' src='./simongame2.mov'></video></a></div>"); 
+       $("#library").html("<a href='https://musicnotes93.github.io/InteractiveLibrary/' target='_blank'><img src='./library.png'></a>")
         }
+
     })
+})
+
+const vid = document.querySelector('#video');
+let currentTime = 0;
+
+vid.addEventListener('mouseleave', function(e) {
+    if (vid.paused) {
+        currentTime = vid.currentTime;
+        vid.load();
+    } else {
+        vid.currentTime = currentTime;
+    }
+});
+
+const vid2 = document.querySelector('#video2');
+
+
+vid2.addEventListener('mouseleave', function(e) {
+    if (vid2.paused) {
+        currentTime = vid.currentTime;
+        vid2.load();
+    } else {
+        vid2.currentTime = currentTime;
+    }
+});
+
+const vid3 = document.querySelector('#video3');
+
+
+vid3.addEventListener('mouseleave', function(e) {
+    if (vid3.paused) {
+        currentTime = vid.currentTime;
+        vid3.load();
+    } else {
+        vid3.currentTime = currentTime;
+    }
+});
+
+const vid4 = document.querySelector('#video4');
+
+
+vid4.addEventListener('mouseleave', function(e) {
+    if (vid4.paused) {
+        currentTime = vid.currentTime;
+        vid4.load();
+    } else {
+        vid4.currentTime = currentTime;
+    }
+});
+
+   
+  
+
+
+
 
   
 
