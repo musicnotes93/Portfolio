@@ -576,7 +576,7 @@ li {
     display: flex;
     justify-content: space-between;
     right:auto;
-    top: -60px;
+    top: -50px;
     
    }
 
@@ -592,6 +592,7 @@ li {
 
   #contact-title {
     font-size: 3rem;
+    margin-top: 10px;
   }
 
   #contact {
