@@ -91,22 +91,22 @@ $( document ).ready(function () {
 function updateContent() {
 if($(window).width()<900)
     {
-       $("#website-project").html("<a href='https://www.malloryphillipsviolin.com' target='_blank'><img src='./website.png' alt='Screenshot of MalloryPhillipsViolin.com'></a>");
-       $("#honeyBearPizza").html("<a href='https://www.honeybearpizza.com' target='_blank'><img src='./honeyBearPizza.png' alt='Screenshot of HoneyBearPizza.com'></a>");
-       $("#cat-quiz").html("<a href='https://musicnotes93.github.io/CatQuiz/' target='_blank'><img src='./catquiz.png' alt='Screenshot of the Cat Quiz Project'></a>");
-       $("#simon-game").html("<a href='https://musicnotes93.github.io/SimonGameMobileFriendly/' target='_blank'><img src='./simon.png' alt='Screenshot of the Simon Game'></a>");
-       $("#library").html("<a href='https://musicnotes93.github.io/InteractiveLibrary/' target='_blank'><img src='./library.png' alt='Screenshot of the Library Website'></a>");
-       $("#planner").html("<a href='https://musicnotes93.github.io/DailyPlanner/' target='_blank'><img src='./reactplanner.png' alt='Screenshot of the Planner App'></a>");
+       $("#website-project").html("<a href='https://www.malloryphillipsviolin.com' target='_blank'><img src='./website.png'></a>");
+       $("#cat-quiz").html("<a href='https://musicnotes93.github.io/CatQuiz/' target='_blank'><img src='./catquiz.png'></a>");
+       $("#simon-game").html("<a href='https://musicnotes93.github.io/SimonGameMobileFriendly/' target='_blank'><img src='./simon.png'></a>");
+       $("#library").html("<a href='https://musicnotes93.github.io/InteractiveLibrary/' target='_blank'><img src='./library.png'></a>")
+       $("#planner").html("<a href='https://musicnotes93.github.io/DailyPlanner/' target='_blank'><img src='./reactplanner.png'></a>")
     } else {
-        $("#website-project").html('<a href="https://www.malloryphillipsviolin.com" target="_blank"><video poster="./website.png" id="video1" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./phillips.mov">Your browser does not support the video tag.</video></a>');
-        $("#honeyBearPizza").html('<a href="https://www.honeybearpizza.com" target="_blank"><video poster="./honeyBearPizza.png" id="video2" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./honeyBearVideo.mp4">Your browser does not support the video tag.</video></a>');
-        $("#cat-quiz").html('<a href="https://musicnotes93.github.io/CatQuiz/" target="_blank"><video poster="./catquiz.png" id="video2" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./catquiz2.mov">Your browser does not support the video tag.</video></a>');
-        $("#simon-game").html('<a href="https://musicnotes93.github.io/SimonGameMobileFriendly/" target="_blank"><video poster="./simon.png" id="video3" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./simongame2.mov">Your browser does not support the video tag.</video></a>');
-        $("#library").html('<a href="https://musicnotes93.github.io/InteractiveLibrary/" target="_blank"><video poster="./library.png" id="video4" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./libraryvid.mov">Your browser does not support the video tag.</video></a>');
-        $("#planner").html('<a href="https://musicnotes93.github.io/DailyPlanner/" target="_blank"><video poster="./reactplanner.png" id="video5" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./reactvid.mov">Your browser does not support the video tag.</video></a>');
-        
-        for (let i=1; i<=5; i++) {
-            $("#video" + i).on("mouseleave", function() {
+        $("#website-project").html(`
+                <a href="https://www.malloryphillipsviolin.com" target="_blank">
+                    <video poster="./website.png" id="video" muted loop preload="auto" 
+                        onmouseover="this.play()" onmouseleave="this.pause()">
+                        <source type="video/mp4" src="./phillips.mov">
+                        Your browser does not support the video tag.
+                    </video>
+                </a>
+            `);
+            $("#video").on("mouseleave", function() {
                 this.pause();
                 this.currentTime = 0;
                 this.load(); 
