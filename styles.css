@@ -4,8 +4,85 @@
     box-sizing: border-box;
 }
 
+#designLogo {
+    height: 100%;
+}
+
+#brush2 {
+    transform: rotate(90deg);
+    position: absolute;
+    width: 400px;
+    right: -125px;
+    top: 75px;
+}
+
+#brush3 {
+    position: absolute;
+    width: 500px;
+    top: -100px;
+    right: 100px;
+    
+}
+
+#menuBar {
+    height: 75px;
+}
+
+#menuBar {
+    background-color: #deabc5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navItems a {
+    margin-right: 50px;
+    font-size: 1.1em;
+    text-decoration: none;
+    background-color: #390c14;
+    color: #EAE4DD;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 0px #390c1465;
+}
+
+#dropdownContainer {
+    display: none;
+}
+
+#dropdownItems li {
+    list-style: none;
+    color:#EAE4DD;
+    font-size: 1.2em;
+    font-family: "SUSE", sans-serif;
+}
+
+#navItems a:hover {
+    background-color: #851d30;
+}
+
+#dropdownItems ul {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+#dropdownItems {
+    background-color:#390c14;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    border-radius: 5px;
+}
+
+
+
+
 #contact {
     width: 100vw;
+    position: relative;
 
 }
 
@@ -24,12 +101,17 @@ body {
     background-color: #EAE4DD;
 }
 
-h1, h2, span {
-    color: #295F98;
+h1, h2, span, p {
+    /* color: #295F98; */
+    color: #390c14
+}
+
+li {
+    color:#490f19;
 }
 
 h1 {
-    font-size: 6vw;
+    font-size: 5vw;
     font-family: "SUSE", sans-serif;
 }
 
@@ -38,8 +120,14 @@ h1 {
     font-style: italic;
 }
 
+#portfolio-title {
+    display: flex;
+    align-items: center;
+}
+
 #by {
-    background-color: #295F98;
+    /* background-color: #295F98; */
+    background-color: #deabc5;
     color: white;
     font-size: 2vw;
     border-radius: 50%;
@@ -67,26 +155,30 @@ p {
 
 #mal {
     width: 50vw;
-    
+}
+
+#position {
+    position: relative;
 }
 
 #para {
+    word-wrap: break-word;
     width: 100%;
-    align-self: flex-start;
+    z-index: 2;
+    padding-left: 50px;
 }
 
-#shapeFormat {
-    width: 83vw;
-    position: relative;
+#shapeContainer {
+    width: 100vw;
     display: flex;
-    gap: 40px;
     justify-content: center;
     align-items: center;
 }
 
-#shapeContainer {
+#shapeFormat {
+    width: 83vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -100,35 +192,22 @@ p {
 }
 
 .geo {
-    width: 7vw;
-    margin: 0 20px;
-    opacity: 0.6;
-}
-
-#geoShapes {
+    width: 30vw;
     position: absolute;
-    bottom: -60px;
+    bottom: -40%;
     left: 0px;
 }
 
-#geoShapes2 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: absolute;
-    top: 10px;
-    right: 0px;
-    z-index: 0;
-}
-
-
-
-
 h4 {
+    position: relative;
     font-size: 2rem;
-    color: #295F98;
+    color:#390c14;
     margin-bottom: 40px;
+    z-index: 2;
+    text-decoration: underline;
 }
+
+
 
 ul {
     position: relative;
@@ -140,10 +219,10 @@ ul {
 
 
 #intro {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100vh;
+    gap: 30px;
 }
 
 .wrapper {
@@ -157,9 +236,6 @@ ul {
 
 
 #projects {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -174,11 +250,13 @@ ul {
 }
 
 #projects h3 {
-    margin-left: 8.5%;
+    position: relative;
+    z-index: 2;
+    margin-left: 8.4%;
     align-self: flex-start;
     font-size: 4rem;
     font-family: "SUSE", sans-serif;
-    color:#295F98;
+    color:#390c14;
 }
 
 .parallax {
@@ -206,12 +284,10 @@ perspective: 1px;
     text-decoration: none;
 }
 
-.flex-project h4 {
-    text-decoration: underline;
-}
+
 
 .flex-project h4:hover {
-    color: #1F316F;
+    color:#851d30;
 }
 
 .flex-project img {
@@ -228,6 +304,7 @@ width: 40vw;
     position: absolute;
     bottom: 20px;
     left: 50%;
+    color:#390c14;
 }
 
 #contact-title {
@@ -259,34 +336,29 @@ hr {
 
 
 
-#geoShapes3 {
-    position: absolute;
-    top: 0px;
-    right: 0;
-}
 
 
 
-#flex-form {
+
+
+
+.contactFlexContainer {
     display: flex;
     justify-content: center;
-    gap: 10px;
-}
-
-#contactFlexContainer {
     width: 100vw;
 }
 
 #contact-me {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 83vw;
 }
 
 #contact-flex {
     position: relative;
     display: flex;
-    width: 85vw;
+    width: 83vw;
 }
 
 #container {
@@ -300,13 +372,14 @@ hr {
 
 
 #contact-me img {
-    width: 50vw;
     height: 100%;
-    margin-top: 30px;
+    width: 40vw;
+    object-fit: contain;
 }
 
 label {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    color:#390c14;
 }
 
 input {
@@ -315,6 +388,11 @@ input {
     font-size: 1.4rem;
     border-radius: 5px;
     border: none;
+}
+
+#nameFlex {
+    display: flex;
+    gap: 10px;
 }
 
 
@@ -329,6 +407,7 @@ input {
 }
 
 #flex-form2 {
+    width: 30vw;
     display: flex;
     flex-direction: column;
 }
@@ -338,14 +417,14 @@ button {
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 50px;
-    background-color:#295F98;
+    background-color:#490f19;
     color:#EAE4DD;
     border: none;
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: #1F316F;
+    background-color:#851d30;
     cursor: pointer;
 }
 
@@ -360,6 +439,10 @@ button:hover {
 @media (max-width: 1196px) {
     .flex-project {
         align-items: center;
+    }
+
+    #contact-me img {
+        height: 45vh;
     }
 }
 
@@ -385,7 +468,13 @@ li {
     width: 50vw;
 }
 
+.contactFlexContainer {
+    display: block;
+    width: 100vw;
+}
+
 #contact-me {
+    width: 100vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -393,55 +482,83 @@ li {
 
 
 #contact-me img {
-    width: 70vw;
+    width: 80vw;
+    object-fit: cover;
 }
 
-#contactForm {
-    width: 70vw;
+#flex-form2 {
+    width: 80vw;
 }
 
-#first-name input {
-    width: 34vw;
+#nameFlex {
+    width: 80vw;
+    justify-content: space-between;
 }
-
-#last-name input {
-    width: 34vw;
+#nameFlex input {
+    width: 38vw;
 }
-
-
-
 
 }
 
 @media (max-width: 775px) {
+
+    #contact-flex {
+        width: 90vw;
+    }
+
+    #para {
+        padding-left: 0;
+    }
+
+    #navItems {
+        display: none;
+    }
+
+    #dropdownContainer {
+        margin-right: 30px;
+        display: block;
+    }
+   
+    .geo {
+        bottom: -25%;
+    }
+
+    #brush2 {
+        transform: none;
+        width: 275px;
+        top: -50px;
+        left: 50px;
+    }
+
+    #brush3 {
+        width: 300px;
+        left: 0;
+        top: -50px;
+    }
+
     #contact-me img {
         width: 90vw;
     }
     
-    #contactForm {
+
+    #flex-form2 {
         width: 90vw;
     }
-    
-    #first-name input {
-        width: 44vw;
-    }
-    
-    #last-name input {
-        width: 44vw;
-    }
-    
- 
 
-    .geo {
-        width: 10vw;
+    #nameFlex {
+       width: 90vw;
     }
+
+    #nameFlex input {
+        width: 42vw;
+    }
+    
     #shapeFormat {
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
         width: 70vw;
        
     }
-
 
 
     p {
@@ -457,13 +574,6 @@ li {
         margin-left: 15%;
     }
 
-    #geoShapes {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        top: 0;
-        left: -60px;
-    }
 
     .flex-project {
         width: 75vw;
@@ -497,8 +607,20 @@ li {
 
 @media (max-width: 640px) {
 
+    #brush2 {
+        left: 0;
+    }
+
+    .geo {
+        width: 40vw;
+    }
+
     #mal {
         width: 100%;
+    }
+
+    #menuBar {
+        height: 50px;
     }
 
     p {
@@ -511,10 +633,6 @@ li {
 
     #margins {
         margin-left: 5%;
-    }
-
-    #geoShapes {
-        left: -50px;
     }
 
     .flex-project {
@@ -536,26 +654,23 @@ li {
 
 @media (max-width: 500px) {
 
-    #geoShapes {
-        width: 100vw;
-        flex-direction: row;
-        justify-content: space-between;
-        left: auto;
-        top: -200px;
-        right: auto;
-        bottom: auto;
-    }
+   .geo {
+     width: 50vw;
+     bottom: -35%;
+   }
+
+
     p {
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin-top: 10px;
     }
 
    h1 {
-    font-size: 3rem;
+    font-size: 2rem;
    }
 
    #portfolio {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
    }
 
    #by {
@@ -567,24 +682,7 @@ li {
     font-size: 1.5rem;
    }
 
-   .geo {
-    width: 15vw;
-   }
 
-   #geoShapes3 {
-    width: 95vw;
-    display: flex;
-    justify-content: space-between;
-    right:auto;
-    top: -50px;
-    
-   }
-
-  #geo-container3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
   #contact-flex {
     display: block;
@@ -598,6 +696,12 @@ li {
   #contact {
     margin: 0;
   }
+
+  #brush3 {
+    width: 200px;
+    left: 0;
+    top: -30px;
+}
 }
 
 

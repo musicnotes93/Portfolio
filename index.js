@@ -11,6 +11,20 @@ window.addEventListener("DOMContentLoaded", function(){
 });
 
 
+$("#dropdownItems").hide();
+$("#dropdownIcon").click(function () {
+    $("#dropdownItems").slideToggle(200);
+})
+
+
+// function dropdownMenu () {
+//     const menuItems = document.getElementById("dropdownItems");
+//     menuItems.classList.toggle("hide");
+// }
+
+
+
+
 
 $(window).on('mousemove', function(e){
     if(e.offsetY > $(this).height() - 200){      
@@ -100,10 +114,10 @@ $( document ).ready(function () {
         } else {
             $("#website-project").html('<a href="https://www.malloryphillipsviolin.com" target="_blank"><video poster="./website.png" id="video1" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./phillips.mov">Your browser does not support the video tag.</video></a>');
             $("#honeyBearPizza").html('<a href="https://www.honeybearpizza.com" target="_blank"><video poster="./honeyBearPizza.png" id="video2" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./honeyBearVideo.mp4">Your browser does not support the video tag.</video></a>');
-            $("#cat-quiz").html('<a href="https://musicnotes93.github.io/CatQuiz/" target="_blank"><video poster="./catquiz.png" id="video2" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./catquiz2.mov">Your browser does not support the video tag.</video></a>');
-            $("#simon-game").html('<a href="https://musicnotes93.github.io/SimonGameMobileFriendly/" target="_blank"><video poster="./simon.png" id="video3" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./simongame2.mov">Your browser does not support the video tag.</video></a>');
-            $("#library").html('<a href="https://musicnotes93.github.io/InteractiveLibrary/" target="_blank"><video poster="./library.png" id="video4" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./libraryvid.mov">Your browser does not support the video tag.</video></a>');
-            $("#planner").html('<a href="https://musicnotes93.github.io/DailyPlanner/" target="_blank"><video poster="./reactplanner.png" id="video5" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./reactvid.mov">Your browser does not support the video tag.</video></a>');
+            $("#cat-quiz").html('<a href="https://musicnotes93.github.io/CatQuiz/" target="_blank"><video poster="./catquiz.png" id="video3" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./catquiz2.mov">Your browser does not support the video tag.</video></a>');
+            $("#simon-game").html('<a href="https://musicnotes93.github.io/SimonGameMobileFriendly/" target="_blank"><video poster="./simon.png" id="video4" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./simongame2.mov">Your browser does not support the video tag.</video></a>');
+            $("#library").html('<a href="https://musicnotes93.github.io/InteractiveLibrary/" target="_blank"><video poster="./library.png" id="video5" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./libraryvid.mov">Your browser does not support the video tag.</video></a>');
+            $("#planner").html('<a href="https://musicnotes93.github.io/DailyPlanner/" target="_blank"><video poster="./reactplanner.png" id="video6" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./reactvid.mov">Your browser does not support the video tag.</video></a>');
             
             for (let i=1; i<=6; i++) {
                 $("#video" + i).on("mouseleave", function() {
