@@ -6,6 +6,8 @@
 
 body {
     background-color: #EAE4DD;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 
@@ -87,12 +89,8 @@ body {
 }
 
 
-
-
 #contact {
-    width: 100vw;
     position: relative;
-
 }
 
 #footer span {
@@ -105,7 +103,6 @@ body {
 }
 
 h1, h2, span, p {
-    /* color: #295F98; */
     color: #390c14
 }
 
@@ -144,12 +141,9 @@ h1 {
     font-size: 2vw;
 }
 
-.year span {
-    font-family: "SUSE", sans-serif;
-}
+
 
 p {
-    /* width: 30vw; */
     font-size: 1.3vw;
    
 }
@@ -165,12 +159,12 @@ p {
 
 #para {
     word-wrap: break-word;
-    width: 100%;
     z-index: 2;
     padding-left: 50px;
 }
 
 #shapeContainer {
+    position: relative;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -185,9 +179,7 @@ p {
 }
 
 
-.flex-container {
-    width: 100vw;
-}
+
 
 #margins {
     margin-left: 8.5%;
@@ -218,8 +210,6 @@ ul {
 }
 
 
-
-
 #intro {
     height: 100vh;
     display: flex;
@@ -227,28 +217,11 @@ ul {
     gap: 30px;
 }
 
-.wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: translateZ(-1px) scale(2);
-}
 
 
 #projects {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    background-color: #EAE4DD;
-    top: 100vh;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: translateZ(0px);
-    z-index: 1;
+    position: relative;
+    
 }
 
 #projects h3 {
@@ -261,13 +234,6 @@ ul {
     color:#390c14;
 }
 
-.parallax {
-
-height: 100vh;
-overflow-x: hidden;
-overflow-y: auto;
-perspective: 1px;
-}
 
 .flexProjectContainer {
     display: flex;
@@ -304,7 +270,7 @@ width: 40vw;
 
 #arrow {
     position: absolute;
-    bottom: 20px;
+    bottom: -40px;
     left: 50%;
     transform: translate(-50%, 0);
     color:#390c14;
@@ -335,15 +301,6 @@ width: 40vw;
 hr {
     margin: 60px 40px;
 }
-
-
-
-
-
-
-
-
-
 
 .contactFlexContainer {
     display: flex;

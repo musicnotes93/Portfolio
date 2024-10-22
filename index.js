@@ -10,11 +10,7 @@ window.addEventListener("DOMContentLoaded", function(){
         $("#portfolio-title").css("opacity", 0).slideDown(1000).animate({ opacity: 1 },{queue: false, duration: 3000});
       }, 500);
     setTimeout(function() {
-        if ($(window).width > 775) {
-        $("#arrow").fadeIn("slow").animate({bottom: 40}).animate({bottom: 20}).animate({bottom: 40}).animate({bottom: 20});
-        } else {
-            $("#arrow").fadeIn("slow").animate({bottom: 0}).animate({bottom: -20}).animate({bottom: 0}).animate({bottom: -20});
-        }
+        $("#arrow").fadeIn("slow").animate({bottom: -20}).animate({bottom: -40}).animate({bottom: -20}).animate({bottom: -40});
     }, 4000);
 });
 
@@ -38,21 +34,7 @@ Array.from(listItems).forEach(function(listItem) {
 
 
 
-$(window).on('mousemove', function(e){
-    if ($(window).width > 775) {
-    if(e.offsetY > $(this).height() - 200){      
-      $("#arrow").animate({bottom: 40}).animate({bottom: 20});
-    } else {
-    $("#arrow").stop(true, true);
-    }
-} else {
-    if(e.offsetY > $(this).height() - 200){      
-        $("#arrow").animate({bottom: 0}).animate({bottom: -20});
-      } else {
-      $("#arrow").stop(true, true);
-      }
-}
-  });
+
 
 
 
