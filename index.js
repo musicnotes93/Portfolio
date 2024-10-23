@@ -1,8 +1,9 @@
 
-window.addEventListener("DOMContentLoaded", function(){
-  $(window).resize(function(){location.reload();});
-  
-  function isInViewport(node) {
+
+
+let resizeTimeout;
+
+function isInViewport(node) {
     var rect = node.getBoundingClientRect();
     return (
         (rect.height > 0 || rect.width > 0) &&
@@ -31,15 +32,30 @@ $(window).scroll(function() {
     if ($(window).width() > 775) {
         updateParallax();
     } else {
-        $('.parallax-window').each(function() {
-            $(this).css('background-attachment', 'scroll');
-            $(this).css('background-position', 'center');
+        $('.parallax-window').css({
+            'background-attachment': 'scroll',
+            'background-position': 'center'
         });
     }
 });
+
+$(window).resize(function() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function() {
+        if ($(window).width() > 775) {
+            $('.parallax-window').css({
+                'background-attachment': 'fixed', // Set to fixed if desired
+                'background-position': 'center'
+            });
+            updateParallax(); // Call updateParallax after resetting styles
+        } else {
+            $('.parallax-window').css({
+                'background-attachment': 'scroll',
+                'background-position': 'center'
+            });
+        }
+    }, 250); // Adjust the timeout as necessary
 });
-
-
 
 
 
