@@ -489,6 +489,15 @@ li {
 
 @media (max-width: 775px) {
 
+    #intro {
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    #arrow {
+        bottom: -40px;
+    }
+
     .parallax-window {
         background-attachment: scroll;
     }
