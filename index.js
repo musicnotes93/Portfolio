@@ -1,3 +1,6 @@
+
+
+
 window.addEventListener("DOMContentLoaded", function(){
     function isInViewport(node) {
         var rect = node.getBoundingClientRect()
@@ -19,7 +22,7 @@ window.addEventListener("DOMContentLoaded", function(){
       
           // Check if the element is in the viewport.
           var visible = isInViewport(this)
-          if(visible) {
+          if(visible && $(window).width > 800) {
             var diff = scrolled - initY
             var ratio = Math.round((diff / height) * 100)
             $(this).css('background-position','center ' + parseInt(-(ratio * 1.5)) + 'px')
@@ -42,9 +45,13 @@ window.addEventListener("DOMContentLoaded", function(){
         $("#portfolio-title").css("opacity", 0).slideDown(1000).animate({ opacity: 1 },{queue: false, duration: 3000});
       }, 500);
     setTimeout(function() {
-        $("#arrow").fadeIn("slow").animate({bottom: -20}).animate({bottom: -40}).animate({bottom: -20}).animate({bottom: -40});
+        $("#arrow").fadeIn("slow").animate({bottom: 20}).animate({bottom: 10}).animate({bottom: 20}).animate({bottom: 10});
     }, 4000);
 });
+
+$(window).scroll(() => {
+    $("#arrow").hide();
+})
 
 
 $("#dropdownItems").hide();
@@ -113,40 +120,49 @@ const form = document.getElementById('contactForm');
 const result = document.getElementById('result');
 
 form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const formData = new FormData(form);
-  const object = Object.fromEntries(formData);
-  const json = JSON.stringify(object);
-  result.innerHTML = "Please wait..."
-
-    fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: json
-        })
-        .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-                result.innerHTML = "<span>Thank you for your email!<span>";
-            } else {
-                console.log(response);
-                result.innerHTML = "<span>Thank you for your email!<span>";
-            }
-        })
-        .catch(error => {
-            console.log(error);
-            result.innerHTML = "Something went wrong!";
-        })
-        .then(function() {
-            form.reset();
-            setTimeout(() => {
-                result.style.display = "none";
-            }, 8000);
-        });
+  const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+  
+      if (!hCaptcha) {
+          e.preventDefault();
+          alert("Please fill out captcha field")
+          return
+      } else {e.preventDefault();
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        result.innerHTML = "Please wait..."
+      
+          fetch('https://api.web3forms.com/submit', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                      'Accept': 'application/json'
+                  },
+                  body: json
+              })
+              .then(async (response) => {
+                  let json = await response.json();
+                  if (response.status == 200) {
+                      result.innerHTML = "<span>Thank you for your email!<span>";
+                  } else {
+                      console.log(response);
+                      result.innerHTML = "<span>Thank you for your email!<span>";
+                  }
+              })
+              .catch(error => {
+                  console.log(error);
+                  result.innerHTML = "Something went wrong!";
+              })
+              .then(function() {
+                  form.reset();
+                  setTimeout(() => {
+                      result.style.display = "none";
+                  }, 8000);
+              });
+  }
 });
+
+
 
 
 

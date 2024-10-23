@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <meta name="description" content="Discover Mallory Phillips, a talented web developer and designer based in Fayetteville, NC. Specializing in innovative website solutions, responsive design, and user-friendly interfaces, Mallory brings your digital vision to life. Elevate your online presence today!">
     <title>Mallory Phillips, Web Developer</title>
     <link rel="stylesheet" href="./styles.css">
@@ -43,12 +43,10 @@
 
   </div>
 
-
-   
+    <div id="homePage">
        <div id="margins">
-     
-       <h1>Web Developer</h1>
-       <h2 id="portfolio-title"><span id="portfolio">Portfolio</span> <span id="by">by</span> <span id="name">Mallory Phillips</span></h2>
+        <h1>Web Developer</h1>
+        <h2 id="portfolio-title"><span id="portfolio">Portfolio</span> <span id="by">by</span> <span id="name">Mallory Phillips</span></h2>
       </div>
     
  <div id="shapeContainer">
@@ -61,13 +59,13 @@
     
     <div id="para">
      <p>I'm a Front End Web Developer based in the North Carolina Triangle area. I am a highly motivated and detail-oriented professional in web development with a robust background in managing diverse tasks, problem-solving, and client communication. Experienced in utilizing technology for project management and improving operational efficiency. Proficient in HTML, CSS, JavaScript, and web development tools, such as React, jQuery, and Git, with a strong foundation in critical thinking and project management from previous roles.</p>
-     <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
-    </svg>
    </div>  
   </div>
  </div>
-
+ <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+</svg>
+</div>
 </section>
  
 <div id="parallax" class="parallax-window" data-image-src="background.jpg"></div>
@@ -227,8 +225,9 @@
     <label for="message">Your message</label><br>
     <textarea id="message" name="message" required></textarea>
     <div>
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    <div class="h-captcha" data-captcha="true"></div>
     <button id="submit">Submit Form</button>
+ 
     </div>
   </form>
  </div>
@@ -245,7 +244,8 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="./parallax.js-1.5.0/"></script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
 <script src="./index.js"></script>
+
 </body>
 </html>
