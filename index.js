@@ -2,38 +2,6 @@
 
 
 window.addEventListener("DOMContentLoaded", function(){
-
-    
-  //   function isInViewport(node) {
-  //     var rect = node.getBoundingClientRect();
-  //     return (
-  //         (rect.height > 0 || rect.width > 0) &&
-  //         rect.bottom >= 0 &&
-  //         rect.right >= 0 &&
-  //         rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-  //         rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-  //     );
-  // }
-  
-  // $(window).scroll(function() {
-  //     // Check if the screen width is greater than 800px
-  //     if ($(window).width() > 775) {
-  //         var scrolled = $(window).scrollTop();
-  //         $('.parallax-window').each(function(index, element) {
-  //             var initY = $(this).offset().top;
-  //             var height = $(this).height();
-  //             var endY  = initY + height;
-  
-  //             // Check if the element is in the viewport.
-  //             var visible = isInViewport(this);
-  //             if (visible) {
-  //                 var diff = scrolled - initY;
-  //                 var ratio = Math.round((diff / height) * 100);
-  //                 $(this).css('background-position', 'center ' + parseInt(-(ratio * 1.5)) + 'px');
-  //             }
-  //         });
-  //     }
-  // });
   
   function isInViewport(node) {
     var rect = node.getBoundingClientRect();
@@ -51,8 +19,6 @@ function updateParallax() {
     $('.parallax-window').each(function() {
         var initY = $(this).offset().top;
         var height = $(this).height();
-
-        // Check if the element is in the viewport.
         var visible = isInViewport(this);
         if (visible) {
             var diff = scrolled - initY;
@@ -66,24 +32,33 @@ $(window).scroll(function() {
     if ($(window).width() > 775) {
         updateParallax();
     } else {
-      $('parallax.window').each(() => {
-        $(this).css('background-attachment', 'scroll');
-        $(this).css('background-position', 'center');
-      })
+        $('.parallax-window').each(function() {
+            $(this).css('background-attachment', 'scroll');
+            $(this).css('background-position', 'center');
+        });
     }
 });
 
-// Handle window resize
-$(window).resize(function() {
+function debounce(func, wait) {
+  let timeout;
+  return function(...args) {
+      const context = this;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(context, args), wait);
+  };
+}
+
+$(window).resize(debounce(function() {
     if ($(window).width() > 775) {
         updateParallax();
     } else {
-      $('parallax.window').each(() => {
-        $(this).css('background-attachment', 'scroll');
-        $(this).css('background-position', 'center');
-      })
+        $('.parallax-window').each(function() {
+            $(this).css('background-attachment', 'scroll');
+            $(this).css('background-position', 'center');
+        });
     }
-});
+}, 100));
+
 
 
 
