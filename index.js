@@ -132,49 +132,53 @@ const form = document.getElementById('contactForm');
 const result = document.getElementById('result');
 
 form.addEventListener('submit', function(e) {
-  const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
-  
-      if (!hCaptcha) {
-          e.preventDefault();
-          alert("Please fill out captcha field")
-          return
-      } else {e.preventDefault();
-        const formData = new FormData(form);
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
-        result.innerHTML = "Please wait..."
-      
-          fetch('https://api.web3forms.com/submit', {
-                  method: 'POST',
-                  headers: {
-                      'Content-Type': 'application/json',
-                      'Accept': 'application/json'
-                  },
-                  body: json
-              })
-              .then(async (response) => {
-                  let json = await response.json();
-                  if (response.status == 200) {
-                      result.innerHTML = "<span>Thank you for your email!<span>";
-                  } else {
-                      console.log(response);
-                      result.innerHTML = "<span>Thank you for your email!<span>";
-                  }
-              })
-              .catch(error => {
-                  console.log(error);
-                  result.innerHTML = "Something went wrong!";
-              })
-              .then(function() {
-                  form.reset();
-                  setTimeout(() => {
-                      result.style.display = "none";
-                  }, 8000);
-              });
-  }
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+    // Check if hCaptcha is filled
+    if (!hCaptcha) {
+        e.preventDefault();
+        alert("Please fill out captcha field");
+        return; // Exit the function if hCaptcha is not filled
+    }
+    
+    // Prevent default form submission
+    e.preventDefault();
+    
+    // Prepare form data for submission
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+    result.innerHTML = "Please wait...";
+
+    // Make the fetch call
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: json
+    })
+    .then(async (response) => {
+        const json = await response.json();
+        if (response.status === 200) {
+            result.innerHTML = "<span>Thank you for your email!<span>";
+        } else {
+            console.log(response);
+            result.innerHTML = "<span>There was a problem with your submission.<span>";
+        }
+    })
+    .catch(error => {
+        console.log(error);
+        result.innerHTML = "Something went wrong!";
+    })
+    .finally(() => { // Use finally instead of then for cleanup
+        form.reset();
+        setTimeout(() => {
+            result.style.display = "none";
+        }, 8000);
+    });
 });
-
-
 
 
 
