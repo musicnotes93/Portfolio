@@ -12,16 +12,14 @@ body {
 
 .parallax-window {
 background-image: url("./background.jpg");
-height: 300px; 
+min-height: 300px; 
 background-attachment: fixed; 
 background-position: center; 
 background-repeat: no-repeat; 
 background-size: cover; 
 }
 
-#parallax {
-    margin-top: 20px;
-}
+
 
 
 
@@ -490,6 +488,10 @@ li {
 }
 
 @media (max-width: 775px) {
+
+    .parallax-window {
+        background-attachment: scroll;
+    }
 
     #contact-flex {
         width: 90vw;
