@@ -15,8 +15,9 @@
 
 
 
-
-
+ <button onclick="topFunction()" id="scrollUp"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+</svg></button> 
  <section id="intro">
   <div id="menuBar">
     <img id="designLogo" src="./logo-transparent-png.png">
@@ -69,6 +70,8 @@
 
 </section>
  
+<div id="parallax" class="parallax-window" data-image-src="background.jpg"></div>
+
 
 
 <section id="projects">
@@ -179,10 +182,9 @@
   </div>
 
 
+  <div id="parallax1" class="parallax-window" data-image-src="background.jpg"></div>
 
-
-
- <hr>
+ 
 
  <section id="contact">
   <img src="./brush-stroke-banner-6.svg" id="brush3">
@@ -226,7 +228,7 @@
     <textarea id="message" name="message" required></textarea>
     <div>
     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-    <button>Submit Form</button>
+    <button id="submit">Submit Form</button>
     </div>
   </form>
  </div>
@@ -243,6 +245,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./parallax.js-1.5.0/"></script>
 <script src="./index.js"></script>
 </body>
 </html>

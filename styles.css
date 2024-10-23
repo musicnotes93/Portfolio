@@ -10,6 +10,26 @@ body {
     overflow-x: hidden;
 }
 
+.parallax-window {
+background-image: url("./background.jpg");
+height: 300px; 
+background-attachment: fixed; 
+background-position: center; 
+background-repeat: no-repeat; 
+background-size: cover; 
+}
+
+
+
+
+#scrollUp {
+    position:fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    background-color:#eae4dd00;
+    z-index: 3;
+}
 
 #designLogo {
     height: 100%;
@@ -91,6 +111,7 @@ body {
 
 #contact {
     position: relative;
+    margin-top: 20px;
 }
 
 #footer span {
@@ -221,6 +242,7 @@ ul {
 
 #projects {
     position: relative;
+    margin-top: 20px;
     
 }
 
@@ -238,6 +260,7 @@ ul {
 .flexProjectContainer {
     display: flex;
     justify-content: center;
+    margin-bottom: 0;
 }
 
 .flex-project {
@@ -372,7 +395,7 @@ input {
     flex-direction: column;
 }
 
-button {
+#submit {
     font-size: 1.2rem;
     padding: 10px;
     margin-top: 20px;
@@ -383,7 +406,7 @@ button {
     border-radius: 5px;
 }
 
-button:hover {
+#submit:hover {
     background-color:#851d30;
     cursor: pointer;
 }
@@ -522,8 +545,8 @@ li {
         flex-direction: column;
         gap: 10px;
         width: 70vw;
-       
     }
+
 
 
     p {
