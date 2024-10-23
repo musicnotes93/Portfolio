@@ -1,7 +1,6 @@
 
-
-
 window.addEventListener("DOMContentLoaded", function(){
+  $(window).resize(function(){location.reload();});
   
   function isInViewport(node) {
     var rect = node.getBoundingClientRect();
@@ -38,26 +37,8 @@ $(window).scroll(function() {
         });
     }
 });
+});
 
-function debounce(func, wait) {
-  let timeout;
-  return function(...args) {
-      const context = this;
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(context, args), wait);
-  };
-}
-
-$(window).resize(debounce(function() {
-    if ($(window).width() > 775) {
-        updateParallax();
-    } else {
-        $('.parallax-window').each(function() {
-            $(this).css('background-attachment', 'scroll');
-            $(this).css('background-position', 'center');
-        });
-    }
-}, 100));
 
 
 
@@ -78,7 +59,7 @@ $(window).resize(debounce(function() {
       } else 
       $("#arrow").fadeIn("slow").animate({bottom: -20}).animate({bottom: -40}).animate({bottom: -20}).animate({bottom: -40});
     }, 4000);
-});
+
 
 $(window).scroll(() => {
     $("#arrow").hide();
