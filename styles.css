@@ -114,6 +114,7 @@ background-size: cover;
 #contact {
     position: relative;
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 #footer span {
@@ -401,7 +402,6 @@ input {
     font-size: 1.2rem;
     padding: 10px;
     margin-top: 20px;
-    margin-bottom: 50px;
     background-color:#490f19;
     color:#EAE4DD;
     border: none;
@@ -720,7 +720,7 @@ li {
   }
 
   #contact {
-    margin: 0;
+    margin: 0 0 50px 0;
   }
 
   #brush3 {
