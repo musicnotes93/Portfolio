@@ -418,8 +418,10 @@ input {
 }
 
 #result {
-    margin-bottom: 30px;
+    margin: 10px 0 0 0;
 }
+
+
 
 @media (max-width: 1196px) {
     .flex-project {
