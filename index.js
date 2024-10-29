@@ -1,6 +1,3 @@
-
-
-
 let resizeTimeout;
 
 function isInViewport(node) {
@@ -44,31 +41,33 @@ $(window).resize(function() {
     resizeTimeout = setTimeout(function() {
         if ($(window).width() > 775) {
             $('.parallax-window').css({
-                'background-attachment': 'fixed', // Set to fixed if desired
+                'background-attachment': 'fixed', 
                 'background-position': 'center'
             });
-            updateParallax(); // Call updateParallax after resetting styles
+            updateParallax(); 
         } else {
             $('.parallax-window').css({
                 'background-attachment': 'scroll',
                 'background-position': 'center'
             });
         }
-    }, 250); // Adjust the timeout as necessary
+    }, 250);
 });
 
 
-
-    $("h1").hide().slideDown(1000);
+document.addEventListener("DOMContentLoaded", () => {
+    $("h1").hide();
     $("#portfolio-title").hide();
+})
 
 
 
 
     $("#arrow").hide();
     setTimeout(function() {
-        $("#portfolio-title").css("opacity", 0).slideDown(1000).animate({ opacity: 1 },{queue: false, duration: 3000});
-      }, 500);
+        $("h1").slideDown(1500);
+        $("#portfolio-title").css("opacity", 0).slideDown(1500).animate({ opacity: 1 },{queue: false, duration: 3000});
+      }, 300);
     setTimeout(function() {
       if($(window).width > 775) {
         $("#arrow").fadeIn("slow").animate({bottom: 20}).animate({bottom: 10}).animate({bottom: 20}).animate({bottom: 10});
@@ -153,10 +152,10 @@ form.addEventListener('submit', function(e) {
     if (!hCaptcha) {
         e.preventDefault();
         alert("Please fill out captcha field");
-        return; // Exit the function if hCaptcha is not filled
+        return;
     }
 
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault(); 
 
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
@@ -175,7 +174,7 @@ form.addEventListener('submit', function(e) {
         const json = await response.json();
         if (response.status === 200) {
             result.innerHTML = "<span>Thank you for your email!<span>";
-            form.reset(); // Reset form only on successful submission
+            form.reset(); 
         } else {
             console.log(response);
             result.innerHTML = "<span>There was a problem with your submission.<span>";
