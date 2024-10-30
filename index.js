@@ -69,11 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
         $("#portfolio-title").css("opacity", 0).slideDown(1500).animate({ opacity: 1 },{queue: false, duration: 3000});
       }, 300);
     setTimeout(function() {
-      if($(window).width > 775) {
+        if ($(window).width() > 775) {
         $("#arrow").fadeIn("slow").animate({bottom: 20}).animate({bottom: 10}).animate({bottom: 20}).animate({bottom: 10});
-      } else 
+      } else{
       $("#arrow").fadeIn("slow").animate({bottom: -20}).animate({bottom: -40}).animate({bottom: -20}).animate({bottom: -40});
-    }, 4000);
+    }
+}, 4000);
+
 
 
 $(window).scroll(() => {
