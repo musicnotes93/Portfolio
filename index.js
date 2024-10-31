@@ -58,11 +58,6 @@ $(window).resize(function() {
 document.addEventListener("DOMContentLoaded", () => {
     $("h1").hide();
     $("#portfolio-title").hide();
-})
-
-
-
-
     $("#arrow").hide();
     setTimeout(function() {
         $("h1").slideDown(1500);
@@ -76,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 }, 4000);
 
-
+})
 
 $(window).scroll(() => {
     $("#arrow").hide();
