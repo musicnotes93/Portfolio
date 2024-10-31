@@ -259,6 +259,7 @@ ul {
     position: relative;
     z-index: 2;
     margin-left: 8.4%;
+    margin-bottom: 20px;
     align-self: flex-start;
     font-size: 4rem;
     font-family: "SUSE", sans-serif;
@@ -455,10 +456,12 @@ li {
 
 .flex-project video {
     width: 50vw;
+    object-fit: cover;
 }
 
 .flex-project img {
     width: 50vw;
+    object-fit: cover;
 }
 
 .contactFlexContainer {
@@ -593,7 +596,8 @@ li {
      }
 
     .flex-project img {
-        width: 100%
+        width: 100%;
+        height: auto;
     }
 
     .flex-project ul {
@@ -682,6 +686,8 @@ li {
     #footer span {
         padding-left: 20px;
     }
+
+
 
 
 }
