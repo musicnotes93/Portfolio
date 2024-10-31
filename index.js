@@ -217,7 +217,14 @@ $( document ).ready(function () {
             
             for (let i=1; i<=6; i++) {
                 $("#video" + i).on("mouseover", function() {
-                    this.play().catch(error => {
+                    this.play().then(() => {
+                        $("#video" + i).on("mouseleave", function() {
+                            this.pause();
+                            this.currentTime = 0;
+                            this.load(); 
+                        });
+                    })
+                        .catch(error => {
                         if (error.name === 'AbortError') {
                           console.error('Playback was interrupted:', error);
                         } else {
@@ -225,11 +232,6 @@ $( document ).ready(function () {
                         }
                       });
                 })
-                $("#video" + i).on("mouseleave", function() {
-                    this.pause();
-                    this.currentTime = 0;
-                    this.load(); 
-                });
             }
         }
     
