@@ -216,6 +216,15 @@ $( document ).ready(function () {
             $("#planner").html('<a href="https://musicnotes93.github.io/DailyPlanner/" target="_blank"><video poster="./assets/reactplanner.png" id="video6" muted loop preload="auto" onmouseover="this.play()"><source type="video/mp4" src="./assets/reactvid.mov">Your browser does not support the video tag.</video></a>');
             
             for (let i=1; i<=6; i++) {
+                $("#video" + i).on("mouseover", function() {
+                    this.play().catch(error => {
+                        if (error.name === 'AbortError') {
+                          console.error('Playback was interrupted:', error);
+                        } else {
+                          console.error('Playback failed:', error);
+                        }
+                      });
+                })
                 $("#video" + i).on("mouseleave", function() {
                     this.pause();
                     this.currentTime = 0;
@@ -227,6 +236,12 @@ $( document ).ready(function () {
     }
     updateContent();
     
+
+
+
+  
+
+
     $(window).resize(function() {
         updateContent();
     });
