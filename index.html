@@ -216,21 +216,22 @@
     <div id="nameFlex">
       <div id="firstName">
       <label for="fname">First name:</label><br>
-      <input type="text" id="fname" name="fname" required>
+      <input type="text" id="fname" name="fname" placeholder="Jane" required>
       </div>
       <div id="lastName">
       <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="lname" required>
+      <input type="text" id="lname" name="lname" placeholder="Doe" required>
       </div>
    </div>
 
 
     <label for="email">Email address</label><br>
-    <input type="email" id="email" name="email" required><br>
+    <input type="email" id="email" name="email" placeholder="youremail@domain.com" required><br>
+    <p class="validEmail">Please enter a valid Email Address</p>
     <label for="phone">Phone number</label><br>
-    <input type="text" id="phone" name="phone"><br>
+    <input type="text" id="phone" name="phone" placeholder="(555)555-5555"><br>
     <label for="message">Your message</label><br>
-    <textarea id="message" name="message" required></textarea>
+    <textarea id="message" name="message" placeholder="Type your message here." required></textarea>
     <div>
     <div class="h-captcha" data-captcha="true"></div>
     <button id="submit">Submit Form</button>
